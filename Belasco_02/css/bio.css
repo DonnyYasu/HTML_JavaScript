@@ -1,0 +1,32 @@
+html,body{
+    background-color: rgb(204, 181, 235);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+    color: black;
+
+}
+
+#main-container{
+    width: 970px;
+    padding: 10px;
+    justify-content: center;
+}
+#section{
+    width:950px;
+    padding: 10px;
+    background-color: teal;
+}
+
+#sections{
+    width:950px;
+    padding: 10px;
+    background-color: teal;
+    text-align: center;
+}
+
+.img:{
+    border: black;
+    border-color: black;
+    border-top-style: dotted;
+    padding: 5px;
+}
