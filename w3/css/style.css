@@ -1,0 +1,119 @@
+
+
+html,body{
+    background-color: maroon;
+    background-image: url("../images/space.jpg");
+    display: flex;
+    justify-content: center;
+
+}
+
+#main-container{
+    width: 980px;
+    padding: 10px;
+    border: rgb(145, 69, 69);
+    background-color: white;
+    margin: 10px;
+
+}
+
+#header{
+    width: 960px;
+    height: 100px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-family: fantasy;
+    line-height: 50px;
+    margin: 0;
+    text-align: center;
+}
+
+.nav{
+    width: 980px;
+    height: 70px;
+    background-color: crimson;
+    border-top:15px whitesmoke;
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+.button{
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    margin-right: 3px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 7px;
+    border: whitesmoke;
+    border-color: whitesmoke;
+    border-style: double;
+}
+
+.button:hover{
+    background-color: crimson;
+}
+
+
+#content{
+    display: flex;
+}
+
+.content-left{
+    height:820px;
+    width: 500px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: silver;
+    text-align: center;
+    
+}
+
+.content-right{
+    height: 820px;
+    width: 500px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: silver;
+    text-align: center;
+}
+
+#footer{
+    background-color: black;
+    color: white;
+    font-family: fantasy;
+    text-align: center;
+}
+
+.content-left1{
+    -ms-transform: rotate(340deg);
+    transform: rotate(340deg);
+    height:500px;
+    width:500px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: silver;
+    margin-top: 80px;
+    border:30px maroon;
+    border-style: outset;
+
+}
+
+#section{
+    width:960px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: #cccccc;
+    margin-top: 10px;
+    border-bottom: 3px solid black;
+    text-align: center;
+    font-family: cursive;
+    position: relative;
+    text-decoration: wavy;
+    color: darkgreen;
+
+}
