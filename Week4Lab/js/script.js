@@ -9,7 +9,7 @@ mario.src = 'images/mario.jpg';
 var x= 0;
 
 //Timer
-var Timer = requestAnimationFrame(main);
+var timer = requestAnimationFrame(main);
 
 function main(){
     timer = requestAnimationFrame(main)
@@ -24,7 +24,9 @@ x++;
 if(x > c.width){
     x = -100;
 }
-console.log("animating")
+ctx.drawImage(mario,0,0, 200,200);
+
+//console.log("animating")
 
 
 
@@ -60,10 +62,10 @@ ctx.strokeStyle = 'black';
 ctx.font = "50px Arial";
 ctx.fillText("Week 4 Lab",c.width/2 -150, 50);
 ctx.strokeText("Week 4 Lab",c.width/2 -150, 50);
-
-//draw image to canvas
-ctx.drawImage(mario,0, 0);
 */
+//draw image to canvas
+
+
 }
 
 function drawBox(){
