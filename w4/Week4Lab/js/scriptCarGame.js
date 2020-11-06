@@ -3,8 +3,12 @@
 var c = document.querySelector('canvas');
 var ctx = c.getContext('2d');
 //Example for loading images to canvas
-var mario = new Image();
-mario.src = 'images/mario.jpg';
+var vegeta = new Image();
+vegeta.src = 'images/vegeta.png';
+var goku = new Image();
+goku.src = 'images/goku.png';
+var dragonballs = new Image();
+dragonballs.src= 'images/dragonballs.png';
 
 var x = 0;
 
@@ -12,11 +16,11 @@ var x = 0;
 var timer = requestAnimationFrame(main);
 
 //variables for starting and finish line
-var start = 110;
-var finish = 700;
+var start = 58;
+var finish = 956;
 
 //fuel variables
-var startFuel = 610;
+var startFuel = 910;
 var fuel = startFuel;
 var barFullWidth = 300;
 
@@ -31,7 +35,7 @@ var frames = fps;
 function main() {
     timer = requestAnimationFrame(main)
     //clear the canvas
-    ctx.clearRect(0, 0, 800, 600);
+    ctx.clearRect(0, 0, 990, 600);
     //draw the game objects
     drawStartLine();
     drawFinishLine();
@@ -58,8 +62,6 @@ else{
 
 
     
-    
-
     if (x > c.width) {
         x = -100;
     }
@@ -79,38 +81,42 @@ else{
 
 
 function drawBox() {
-    ctx.fillStyle = 'purple'
-    ctx.fillRect(x, c.height / 2, 100, 50);
+    ctx.drawImage(goku, x, c.height / 2, 100, 50);
 
 }
 
 function drawSprite() {
     //drawimage to canvas
-    ctx.drawImage(mario, x, 110, 100, 100);
+    ctx.drawImage(vegeta, x, 110, 100, 100);
 
 }
 
 function drawStartLine() {
-    ctx.fillStyle = 'red';
-    ctx.fillRect(start, 100, 10, 400);
+    ctx.fillStyle = 'green';
+    ctx.fillRect(start, 100, 20, 450);
 }
 
 function drawFinishLine() {
-    ctx.fillStyle = 'blue';
-    ctx.fillRect(finish, 100, 10, 400);
+    ctx.fillStyle = 'yellow';
+    ctx.fillRect(finish, 100, 20, 450);
 }
 
 function drawFuelBar() {
     var barCurrentWidth = barFullWidth * getFuelPercentage();
-
-    ctx.fillStyle = 'orange';
-    ctx.fillRect(start, 80, barCurrentWidth, 10);
+    
+    ctx.fillStyle = 'grey';
+    ctx.fillRect(start, 512, barCurrentWidth, 10);
+    
+    
+    
 }
 
 function drawFuelText(){
-    ctx.fillStyle = 'black';
-    ctx.font = '30px Arial';
-    ctx.fillText(fuel, start, 50);
+    ctx.fillStyle = 'gold';
+    ctx.font = '30px Fantasy';
+    ctx.fillText(fuel, start, 50 );
+    ctx.fillText("Ki", c.width/2, c.height/2);
+    
 }
 
 function getFuelPercentage(){
@@ -120,18 +126,18 @@ function getFuelPercentage(){
 function drawResults(){
     if(x + 100 > finish){
         //Winning Condition
-        ctx.fillStyle = 'black';
-        ctx.font = '30px Arial'
+        ctx.fillStyle = 'white';
+        ctx.font = '60px Fantasy'
         ctx.textAlign = 'center'
-        ctx.fillText("You made it to the Finish Line! You Win! Fatality!", c.width/2, c.height/2);
+        ctx.fillText("That is nothing for a Saiyan elite like me. ", c.width/2, c.height/2);
 
     }
     else{
         //Losing Condition
-        ctx.fillStyle = 'black';
-        ctx.font = '30px Arial'
+        ctx.fillStyle = 'white';
+        ctx.font = '60px Fantasy'
         ctx.textAlign = 'center'
-        ctx.fillText("You ran out of fuel. Git g00d n00b!", c.width/2, c.height/2);
+        ctx.fillText("What?! Impossible!!!", c.width/2, c.height/2);
     }
 }
 
@@ -144,9 +150,10 @@ function runStartTimer(){
 }
 
 function drawStartTimer(){
-        ctx.fillStyle = 'black';
-        ctx.font = '30px Arial'
+        ctx.fillStyle = 'orange';
+        ctx.font = '60px Fantasy'
         ctx.textAlign = 'center'
         ctx.fillText(sec, c.width / 2, c.height / 2);
 
 }
+

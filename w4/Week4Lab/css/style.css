@@ -1,0 +1,55 @@
+/*CSS goes here*/
+
+html,body{
+    height: 100%;
+    margin: 0;
+}
+#header{
+    font-family: 'Fjalla One', sans-serif;
+    color: darkkhaki;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+    width:5000px;
+    background-image: url("../images/Shenron.jpg");
+    padding:10px;
+
+}
+
+header{
+    background-color:black;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+nav{
+    background-color: white;
+    margin-bottom: 10px;
+
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+canvas{
+    background-image: url("../images/world_tournament.jpg") ;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    width: 1024px;
+    height: 768px;
+}
+
+footer{
+    background-color: black;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+}
