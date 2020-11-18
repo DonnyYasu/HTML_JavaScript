@@ -35,12 +35,13 @@ var frames = fps;
 function main() {
     timer = requestAnimationFrame(main)
     //clear the canvas
-    ctx.clearRect(0, 0, 990, 600);
+    ctx.clearRect(0, 0, c.width, c.height);
     //draw the game objects
     drawStartLine();
     drawFinishLine();
     drawBox();
     drawSprite();
+    fuelBG();
     drawFuelBar();
     drawFuelText();
 
@@ -104,11 +105,16 @@ function drawFinishLine() {
 function drawFuelBar() {
     var barCurrentWidth = barFullWidth * getFuelPercentage();
     
-    ctx.fillStyle = 'grey';
-    ctx.fillRect(start, 512, barCurrentWidth, 10);
+    //ctx.fillStyle = 'grey';
+    //ctx.fillRect(500, 650, barCurrentWidth, 10);
+    ctx.drawImage(dragonballs, 500, 650, barCurrentWidth,70)    
     
     
-    
+}
+
+function fuelBG(){
+    ctx.fillStyle = 'black';
+    ctx.fillRect(500, 650, barFullWidth, 70);
 }
 
 function drawFuelText(){
@@ -127,9 +133,11 @@ function drawResults(){
     if(x + 100 > finish){
         //Winning Condition
         ctx.fillStyle = 'white';
+        ctx.strokeStyle = 'black';
         ctx.font = '60px Fantasy'
         ctx.textAlign = 'center'
         ctx.fillText("That is nothing for a Saiyan elite like me. ", c.width/2, c.height/2);
+        ctx.strokeText("That is nothing for a Saiyan elite like me. ", c.width/2, c.height/2);
 
     }
     else{
