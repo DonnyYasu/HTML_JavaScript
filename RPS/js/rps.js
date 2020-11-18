@@ -32,7 +32,7 @@ function play(pChoice)
 {
     var cChoice = Math.floor(Math.random()*2.999999)
     
-    ctx.clearRect(0,0,c.width,c.height) 
+    ctx.clearRect(0,0, c.width, c.height) 
 
     switch(pChoice){
         case 0:
@@ -97,7 +97,7 @@ function play(pChoice)
                     ctx.font = '30px Fantasy'
                     ctx.textAlign = 'center'
                     ctx.fillText("Your Shield loses to CPU's EMP. Game over, man! Game over!", c.width/2, c.height/2);
-                    ctx.strokeText("Your Shield loses to CPU's EMP.", c.width/2, c.height/2);
+                    ctx.strokeText("Your Shield loses to CPU's EMP. Game over, man! Game over!", c.width/2, c.height/2);
                 } 
             break;
 
